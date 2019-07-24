@@ -32,3 +32,11 @@ EBCEEB Platform repository
 * Создан сервис LoadBalancer для ingress-nginx
 * Создан headless сервис для подов созданных деплойментом
 * Создан ingress-proxy (на URL /web) для подов созданных деплойментом
+
+### Домашнее задание 4
+
+* Создан StatefulSet minio
+* Coздан headless сервис для minio
+* Создан secret, содержащий access_key и secret_key
+* StatefulSet minio изменён таким образом, чтобы ключи доступа монтировались как файлы
+  /run/secrets/access_key и /run/secrets/secret_key соответственно
