@@ -40,3 +40,11 @@ EBCEEB Platform repository
 * Создан secret, содержащий access_key и secret_key
 * StatefulSet minio изменён таким образом, чтобы ключи доступа монтировались как файлы
   /run/secrets/access_key и /run/secrets/secret_key соответственно
+
+### Домашнее задание 5
+
+* Создан кластер kind с включенным feature gate `VolumeSnapshotDataSource`
+* В кластер установлен hostPath CSI драйвер
+* Создан storageClass, использующий hostPath CSI драйвер
+* Создан PVC использующий hostPath storageClass
+* Создан под, ссылающийся на PVC использующий hostPath

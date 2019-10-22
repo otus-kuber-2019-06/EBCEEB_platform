@@ -1,0 +1,15 @@
+---
+
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  annotations:
+    storageclass.beta.kubernetes.io/is-default-class: "true"
+    storageclass.kubernetes.io/is-default-class: "true"
+  labels:
+    addonmanager.kubernetes.io/mode: EnsureExists
+  name: csi-hostpath-sc
+reclaimPolicy: Delete
+volumeBindingMode: Immediate
+provisioner: hostpath.csi.k8s.io
+allowVolumeExpansion: true
